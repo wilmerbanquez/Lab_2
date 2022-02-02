@@ -4,6 +4,7 @@ using namespace std;
 int opcion;
 void prob3(char palabra[25], char palabra1[25]);
 void prob5(int num, char cad[]);
+void prob8(char cad[]);
 int main()
 {
     cout <<"Seleccione una opcion"<<endl;
@@ -50,6 +51,53 @@ int main()
         cin >>num;
         char cad[25];
         prob5(num, cad);
+    }
+    case 8:
+    {
+        char cad[50];
+        cout <<"Ingrese una cadena de caracteres: ";
+        cin >>cad;
+        int a = 0;
+        int aux = 0;
+        while(cad[a]!='\0'){
+            if(cad[a] >=65 and cad[a]<=90 or (cad[a]>=97 and cad[a]<=122)){
+                aux++;
+            }
+            a++;
+        }
+        a = 0;
+        int b = 0;
+        char palabra[aux];
+        while(aux>0){
+            if(cad[a] >=65 and cad[a]<=90 or (cad[a]>=97 and cad[a]<=122)){
+                palabra[b] = cad[a];
+                aux--;
+                b++;
+            }
+            a++;
+        }
+        cout<< "Texto: "<<palabra<<endl;
+        a = 0;
+        aux = 0;
+        while(cad[a]!='\0'){
+            if(cad[a] >=48 and cad[a]<=57){
+                aux++;
+            }
+            a++;
+
+        }
+        char num[aux];
+        a = 0;
+        b = 0;
+        while(aux>0){
+            if(cad[a] >=48 and cad[a]<=57){
+                num[b] = cad[a];
+                aux--;
+                b++;
+            }
+            a++;
+        }
+        cout << "Numeros: "<<num<<endl;
     }
     }
     return 0;
