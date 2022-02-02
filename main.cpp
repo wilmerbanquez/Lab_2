@@ -35,6 +35,29 @@ int main()
     }
     case 3:
     {
+        char palabra[25];
+        cout <<"Ingrese una palabra: ";
+        cin >>palabra;
+        char palabra1[25];
+        cout <<"Ingrese otra palabra: ";
+        cin >>palabra1;
+        unsigned short int a;
+        unsigned short int b;
+        bool cond = true;
+        for(int i = 0;palabra[i]!='\0';i++)
+            a = i;
+        for(int i = 0;palabra1[i]!='\0';i++)
+            b = i;
+        if(a==b){
+            for(int i = 0;palabra[i]!='\0';i++){
+                if(palabra[i]!=palabra1[i])
+                    cond = false;
+            }
+        }
+        cout <<cond<<endl;
+    }
+    case 5:
+    {
 
     }
     }
