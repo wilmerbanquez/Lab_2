@@ -3,7 +3,7 @@
 using namespace std;
 int opcion;
 void prob3(char palabra[25], char palabra1[25]);
-void prob5(int num);
+void prob5(int num, char cad[]);
 int main()
 {
     cout <<"Seleccione una opcion"<<endl;
@@ -45,7 +45,11 @@ int main()
     }
     case 5:
     {
-
+        int num;
+        cout <<"Ingrese un numero: ";
+        cin >>num;
+        char cad[25];
+        prob5(num, cad);
     }
     }
     return 0;
@@ -68,6 +72,21 @@ void prob3(char palabra[25], char palabra1[25]){
     if(a!=b)
         cout <<"Las palabras son de diferente longitud"<<endl;
 }
-void prob5(int num){
-
+void prob5(int num, char cad[]){
+    int n = 0;
+    int aux = num;
+    while(aux>0){
+        aux = aux/10;
+        n++;
+    }
+    cad[n] = '\0';
+    aux = num;
+    int pos = n-1, dig;
+    while(pos>=0){
+        dig = aux%10;
+        aux = aux/10;
+        cad[pos] = dig + '\0';
+        pos--;
+    }
+    cout<< cad;
 }
