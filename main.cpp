@@ -3,6 +3,7 @@
 using namespace std;
 int opcion;
 void prob3(char palabra[25], char palabra1[25]);
+void prob5(int num);
 int main()
 {
     cout <<"Seleccione una opcion"<<endl;
@@ -66,4 +67,7 @@ void prob3(char palabra[25], char palabra1[25]){
     }
     if(a!=b)
         cout <<"Las palabras son de diferente longitud"<<endl;
+}
+void prob5(int num){
+
 }
