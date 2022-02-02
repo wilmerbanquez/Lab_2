@@ -2,6 +2,7 @@
 
 using namespace std;
 int opcion;
+void prob3(char palabra[25], char palabra1[25]);
 int main()
 {
     cout <<"Seleccione una opcion"<<endl;
@@ -36,25 +37,10 @@ int main()
     case 3:
     {
         char palabra[25];
-        cout <<"Ingrese una palabra: ";
-        cin >>palabra;
         char palabra1[25];
-        cout <<"Ingrese otra palabra: ";
-        cin >>palabra1;
-        unsigned short int a;
-        unsigned short int b;
-        bool cond = true;
-        for(int i = 0;palabra[i]!='\0';i++)
-            a = i;
-        for(int i = 0;palabra1[i]!='\0';i++)
-            b = i;
-        if(a==b){
-            for(int i = 0;palabra[i]!='\0';i++){
-                if(palabra[i]!=palabra1[i])
-                    cond = false;
-            }
-        }
-        cout <<cond<<endl;
+        cout <<"Ingrese una palabra: "; cin >>palabra;
+        cout <<"Ingrese otra palabra: "; cin >>palabra1;
+        prob3(palabra, palabra1);
     }
     case 5:
     {
@@ -62,4 +48,22 @@ int main()
     }
     }
     return 0;
+}
+void prob3(char palabra[25], char palabra1[25]){
+    unsigned short int a;
+    unsigned short int b;
+    bool cond = true;
+    for(int i = 0;palabra[i]!='\0';i++)
+        a = i;
+    for(int i = 0;palabra1[i]!='\0';i++)
+        b = i;
+    if(a==b){
+        for(int i = 0;palabra[i]!='\0';i++){
+            if(palabra[i]!=palabra1[i])
+                cond = false;
+        }
+        cout <<cond<<endl;
+    }
+    if(a!=b)
+        cout <<"Las palabras son de diferente longitud"<<endl;
 }
