@@ -4,7 +4,6 @@ using namespace std;
 int opcion;
 void prob3(char palabra[25], char palabra1[25]);
 void prob5(int num, char cad[]);
-void prob8(char cad[]);
 int main()
 {
     cout <<"Seleccione una opcion"<<endl;
