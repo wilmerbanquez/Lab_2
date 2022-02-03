@@ -34,6 +34,7 @@ int main()
                 cout<<"faltante: "<<dinero<<endl;
             }
         }
+        break;
     }
     case 3:
     {
@@ -42,6 +43,7 @@ int main()
         cout <<"Ingrese una palabra: "; cin >>palabra;
         cout <<"Ingrese otra palabra: "; cin >>palabra1;
         prob3(palabra, palabra1);
+        break;
     }
     case 5:
     {
@@ -50,6 +52,8 @@ int main()
         cin >>num;
         char cad[25];
         prob5(num, cad);
+        cout<<cad<<endl;
+        break;
     }
     case 8:
     {
@@ -97,6 +101,7 @@ int main()
             a++;
         }
         cout << "Numeros: "<<num<<endl;
+        break;
     }
     }
     return 0;
@@ -135,5 +140,8 @@ void prob5(int num, char cad[]){
         cad[pos] = dig + '\0';
         pos--;
     }
-    cout<< cad;
+    n-=1;
+    for(n;n>=0;n--){
+        cad[n] +=48;
+    }
 }
